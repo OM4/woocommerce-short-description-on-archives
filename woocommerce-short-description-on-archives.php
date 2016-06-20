@@ -3,9 +3,9 @@
 Plugin Name: WooCommerce Product Short Descriptions on Shop Pages
 Plugin URI: https://github.com/OM4/woocommerce-short-description-on-archives
 Description: Adds each WooCommerce product's short description to shop and category/tag archive pages.
-Version: 0.1
+Version: 0.2
 Author: OM4
-Author URI: http://om4.com.au/
+Author URI: https://om4.com.au/plugins/
 Text Domain: woocommerce-short-description-on-archives
 Git URI: https://github.com/OM4/woocommerce-short-description-on-archives
 Git Branch: release
@@ -13,7 +13,7 @@ License: GPLv2
 */
 
 /*
-Copyright 2014 OM4 (email: info@om4.com.au    web: http://om4.com.au/)
+Copyright 2014-2016 OM4 (email: plugins@om4.com.au    web: https://om4.com.au/plugins/)
 
 This program is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -68,7 +68,7 @@ if ( ! class_exists( 'WC_Short_Description_On_Archives' ) ) {
 		 *
 		 * Executed by the woocommerce_after_shop_loop_item_title hook.
 		 */
-		public function woocommerce_after_shop_loop_item_title( $classes, $class = '', $post_id = '' ) {
+		public function woocommerce_after_shop_loop_item_title() {
 
 			wc_get_template( 'single-product/short-description.php' );
 
